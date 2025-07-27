@@ -134,3 +134,31 @@ Use these scripts at your own risk. Always backup important data before running 
 ## 📜 License
 
 MIT © Your Name
+
+---
+
+## 🧹 About the Cleanup Scripts
+
+All cleanup scripts in this repository are designed to be:
+
+- **Safe by default:** Scripts avoid deleting critical system files and use package manager commands for safe removal of unnecessary packages and caches.
+- **Distro-aware:** Each script is tailored to the package manager, log locations, and cache directories of its target distribution.
+- **Transparent:** Actions are printed to the terminal before execution, and most scripts support a dry-run mode to preview changes.
+- **Modular:** Shared logic and helpers are placed in the `scripts/` directory for easy reuse and extension.
+
+### What the scripts do
+
+- Clean package manager caches (e.g., pacman, apt, dnf)
+- Remove old log files and journal entries
+- Delete orphaned packages and unused dependencies
+- Clear thumbnail and user cache directories
+- Optionally remove old kernels (where safe)
+- Print a summary of freed disk space
+
+### What the scripts do **not** do
+
+- Do not remove user data, home directory files, or personal documents
+- Do not touch system configuration files outside of safe cleanup areas
+- Do not run dangerous commands without explicit user confirmation
+
+Each script includes comments and usage instructions. Please review and test scripts before running them, especially on production systems.
